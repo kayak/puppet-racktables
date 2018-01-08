@@ -11,6 +11,7 @@ class racktables::params {
   $datadir               = '/usr/local/share/RackTables'
   $repoensure            = 'present'
   $vcsprovider           = 'git'
+  $installvcsprovider    = true
   $source                = 'https://github.com/RackTables/racktables.git'
 
   case $::osfamily {

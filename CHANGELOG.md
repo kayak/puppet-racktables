@@ -1,6 +1,9 @@
+### 0.3.4 2018-01-08
+    update: add option to not install git
+
 ### 0.3.3 2015-10-26
     update: Permit user-determined secret.php contents (#8) by Matt Simmons
-    
+
 ### 0.3.2 2015-03-10
     update: template file for inc/secret.php complete (#7)
 
