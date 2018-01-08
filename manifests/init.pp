@@ -59,8 +59,9 @@ class racktables (
   $packages              = $racktables::params::packages,
   $repoensure            = $racktables::params::repoensure,
   $vcsprovider           = $racktables::params::vcsprovider,
-  $installvcsprovider           = $racktables::params::installvcsprovider,
+  $installvcsprovider    = $racktables::params::installvcsprovider,
   $source                = $racktables::params::source,
+  $custom_fragment       = undef,
 ) inherits racktables::params {
 
   validate_string($vhost)

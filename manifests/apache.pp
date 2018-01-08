@@ -1,9 +1,10 @@
 # Installs apache and racktables vhost
 class racktables::apache (
-  $vhost    = $::racktables::vhost,
-  $ssl_cert = $::racktables::ssl_cert,
-  $ssl_key  = $::racktables::ssl_key,
-  $datadir  = $::racktables::datadir,
+  $vhost            = $::racktables::vhost,
+  $ssl_cert         = $::racktables::ssl_cert,
+  $ssl_key          = $::racktables::ssl_key,
+  $datadir          = $::racktables::datadir,
+  $custom_fragment  = $::racktables::custom_fragment
 ) {
 
   validate_string($vhost)
@@ -45,6 +46,7 @@ class racktables::apache (
     ssl_cert        => $ssl_cert,
     ssl_key         => $ssl_key,
     override        => 'AuthConfig',
+    custom_fragment => $custom_fragment,
     require         => Vcsrepo[$datadir],
   }
 
