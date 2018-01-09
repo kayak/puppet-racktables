@@ -12,6 +12,7 @@ class racktables::config (
   $db_name = $::racktables::db_name
   $db_username = $::racktables::db_username
   $db_password = $::racktables::db_password
+  $db_host     = $::racktables::db_host
   $pdo_bufsize = $::racktables::pdo_bufsize
   $user_auth_src = $::racktables::user_auth_src
   $require_local_account = $::racktables::require_local_account
