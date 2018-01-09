@@ -9,6 +9,16 @@ class racktables::config (
   validate_string($apacheuser)
   validate_string($datadir)
 
+  $db_name = $::racktables::db_name
+  $db_username = $::racktables::db_username
+  $db_password = $::racktables::db_password
+  $pdo_bufsize = $::racktables::pdo_bufsize
+  $user_auth_src = $::racktables::user_auth_src
+  $require_local_account = $::racktables::require_local_account
+  $ldap_options = $::racktables::ldap_options
+  $saml_options = $::racktables::saml_options
+  $helpdesk_banner = $::racktables::helpdesk_banner
+
   case $secretfile {
 
     'template': {
